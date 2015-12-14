@@ -47,6 +47,11 @@ void print_array(const int* array){
  }
 }
 
+
+
+//---------- SORTING METHODS ----------//
+
+//sort in ascending order
 void insertion_sort(int* target_array){
  for(int i = 1; i < array_size; i++){
   for(int j = i; j > 0 && target_array[j-1] > target_array[j]; j--){
@@ -56,3 +61,16 @@ void insertion_sort(int* target_array){
   }	
  }
 }
+
+
+//sort in descending order
+void sort_inverse(int *target_array){
+ for(int i = 1; i < array_size; i++){
+  for(int j = i; j > 0 && target_array[j-1] < target_array[j]; j--){
+  	int temp = target_array[j];
+  	target_array[j] = target_array[j-1];
+  	target_array[j-1] = temp;
+  }
+ }
+}
+
